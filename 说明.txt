@@ -1,0 +1,2 @@
+文件 _data : 里面是博客背景图的代码
+文件 images: 里面是放图片的，名字为 background.pnd 的就是背景图  
