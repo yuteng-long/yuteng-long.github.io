@@ -162,6 +162,110 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%92%AD%E6%94%BE%E5%99%A8%E6%96%87%E6%A1%A31/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="龙宇腾">
+      <meta itemprop="description" content="选择有时候比努力更重要">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="清风">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%92%AD%E6%94%BE%E5%99%A8%E6%96%87%E6%A1%A31/" class="post-title-link" itemprop="url">自定义视频播放器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-05 14:07:33 / 修改时间：15:51:50" itemprop="dateCreated datePublished" datetime="2021-05-05T14:07:33+08:00">2021-05-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>项目盒子播放器<br>视口：3D视口。<br>左侧：左侧功能按钮+播放列表<br>右侧：右侧音乐播放屏、<br>顶部：顶部灯<br>底部：播放器的各种功能按键</p>
+<p>整体效果图：</p>
+<p>播放时：左、右面的内容都是默认在背面，是为了关灯的时候是看不见的，移入对应的面显示对应的内容。</p>
+<p><strong>左侧</strong></p>
+<p>1.点击播放播放按钮，已播放的状态显示在面上，点击播放时如果灯是开的就关掉，是关的就不管。播放停止或者播放结束，如果是关灯状态，自动开灯。</p>
+<p>2.在播放的时候可以随便开关灯，不影响播放，关灯时，显示一个<strong>背景</strong>的按钮（只有关灯时会出来），点击有<strong>特效</strong>，开灯时或再次点击<strong>背景</strong>消失。</p>
+<p>3.背景色切换，是input一个颜色块，可以切换开灯状态下的整体颜色。</p>
+<p>4.视角后移、视角前移、视口会向前或者后移动100，有边界值的判断。</p>
+<p>5.点击全屏，视口向前推进到 500 的位置然后再显示全屏。</p>
+<p>6.播放列表，鼠标移入时翻转到正常视角操作，每一项表示一个视频。超出的部分使用<strong>自定义的滚轮滚动</strong>，可以向下或上滚动，当前再播放的项有高亮显示。</p>
+<p><strong>只有前五个有视频</strong>。</p>
+<p><strong>底部</strong></p>
+<p>六个选项，从左往右前进后退、播放倍数、音量的控制，使用点击控制，每个上面点击会有一个光球冒出来。光球是上下关联的，值越大球越亮</p>
+<p>比如中间的倍数播放：默认是 1倍数 最大值是 3倍数，<strong>点击上面的快进时光球会越来越亮，点击下面的慢放光球会越来越暗</strong></p>
+<p><strong>右侧</strong></p>
+<p>音乐播放,直接再本地打开音乐可能会不能播放，需要通过编译器打开。</p>
+<p>使用jQuery的插件，将值调整好后放入得到项目中，鼠标移入翻转到正常视角操作。</p>
+<p>再项目中的 音乐播放 位置的可以添加音乐</p>
+<p>![音乐播放](C:\Users\86150\Desktop\自定义视频播放器\images\音乐播放.png</p>
+<p><strong>视口</strong></p>
+<p>鼠标移入时显示进度条和时间，进度条可以拖动和点击，点击就播放到点击的位置去。</p>
+<p>推拽，先判断视频是否再播放，在播放就停止，等推拽完，再开始播放，如果没有播放推拽到位置后也不播放。</p>
+<p><strong>点击音效</strong></p>
+<p>点击<strong>左侧</strong>和<strong>底部</strong>的选项时有声音提示。</p>
+<p><strong>项目文件</strong></p>
+<p>css</p>
+<ol>
+<li> animations.css：动画样式效果</li>
+<li> main.css、player.css：音乐播放插件的样式</li>
+<li> page.css：主样式</li>
+<li> fonts：图标</li>
+</ol>
+<p>js</p>
+<ol>
+<li>formInput.js：背景色切换</li>
+<li>page.js：视频的基础效果：开关灯、视角移动、全屏等</li>
+<li>Page_slider.js：侧边滚动的js</li>
+<li>player.js：音乐播放的插件</li>
+<li>playStyle.js：视频播放和光球的联动效果</li>
+<li>special .js：关灯后背景效果</li>
+<li>tools.js：背景声效、进度条随视频的播放、视频时间计算等</li>
+<li>videoPlay.js：视频的切换、进度条的推拽、点击等效果。</li>
+</ol>
+<p>music：音乐文件</p>
+<p>va：视频文件</p>
+<p>VideoPlayer.html：初始页面。<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">https://hexo.io/docs/one-command-deployment.html</a>)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/05/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,113 +318,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%92%AD%E6%94%BE%E5%99%A8%E6%96%87%E6%A1%A31/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="龙宇腾">
-      <meta itemprop="description" content="选择有时候比努力更重要">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="清风">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%92%AD%E6%94%BE%E5%99%A8%E6%96%87%E6%A1%A31/" class="post-title-link" itemprop="url">自定义视频播放器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-05-05 14:07:33 / 修改时间：15:39:16" itemprop="dateCreated datePublished" datetime="2021-05-05T14:07:33+08:00">2021-05-05</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>项目盒子播放器<br>视口：3D视口。<br>左侧：左侧功能按钮+播放列表<br>右侧：右侧音乐播放屏、<br>顶部：顶部灯<br>底部：播放器的各种功能按键</p>
-<p>整体效果图：</p>
-<p><img src="C:\Users\86150\Desktop\自定义视频播放器\images\效果图.png" alt="效果图"></p>
-<p>播放时：左、右面的内容都是默认在背面，是为了关灯的时候是看不见的，移入对应的面显示对应的内容。</p>
-<p><img src="C:\Users\86150\Desktop\自定义视频播放器\images\播放时.png" alt="播放时"></p>
-<p><strong>左侧</strong></p>
-<p>1.点击播放播放按钮，已播放的状态显示在面上，点击播放时如果灯是开的就关掉，是关的就不管。播放停止或者播放结束，如果是关灯状态，自动开灯。</p>
-<p>2.在播放的时候可以随便开关灯，不影响播放，关灯时，显示一个<strong>背景</strong>的按钮（只有关灯时会出来），点击有<strong>特效</strong>，开灯时或再次点击<strong>背景</strong>消失。</p>
-<p>3.背景色切换，是input一个颜色块，可以切换开灯状态下的整体颜色。</p>
-<p>4.视角后移、视角前移、视口会向前或者后移动100，有边界值的判断。</p>
-<p>5.点击全屏，视口向前推进到 500 的位置然后再显示全屏。</p>
-<p>6.播放列表，鼠标移入时翻转到正常视角操作，每一项表示一个视频。超出的部分使用<strong>自定义的滚轮滚动</strong>，可以向下或上滚动，当前再播放的项有高亮显示。</p>
-<p><strong>只有前五个有视频</strong>。</p>
-<p><strong>底部</strong></p>
-<p>六个选项，从左往右前进后退、播放倍数、音量的控制，使用点击控制，每个上面点击会有一个光球冒出来。光球是上下关联的，值越大球越亮</p>
-<p>比如中间的倍数播放：默认是 1倍数 最大值是 3倍数，<strong>点击上面的快进时光球会越来越亮，点击下面的慢放光球会越来越暗</strong></p>
-<p><img src="C:\Users\86150\Desktop\自定义视频播放器\images\光球.png" alt="光球"></p>
-<p><strong>右侧</strong></p>
-<p>音乐播放,直接再本地打开音乐可能会不能播放，需要通过编译器打开。</p>
-<p>使用jQuery的插件，将值调整好后放入得到项目中，鼠标移入翻转到正常视角操作。</p>
-<p>再项目中的 音乐播放 位置的可以添加音乐</p>
-<p><img src="C:\Users\86150\Desktop\自定义视频播放器\images\音乐播放.png" alt="音乐播放"></p>
-<p><strong>视口</strong></p>
-<p>鼠标移入时显示进度条和时间，进度条可以拖动和点击，点击就播放到点击的位置去。</p>
-<p>推拽，先判断视频是否再播放，在播放就停止，等推拽完，再开始播放，如果没有播放推拽到位置后也不播放。</p>
-<p><strong>点击音效</strong></p>
-<p>点击<strong>左侧</strong>和<strong>底部</strong>的选项时有声音提示。</p>
-<p><strong>项目文件</strong></p>
-<p>css</p>
-<ol>
-<li> animations.css：动画样式效果</li>
-<li> main.css、player.css：音乐播放插件的样式</li>
-<li> page.css：主样式</li>
-<li> fonts：图标</li>
-</ol>
-<p>js</p>
-<ol>
-<li>formInput.js：背景色切换</li>
-<li>page.js：视频的基础效果：开关灯、视角移动、全屏等</li>
-<li>Page_slider.js：侧边滚动的js</li>
-<li>player.js：音乐播放的插件</li>
-<li>playStyle.js：视频播放和光球的联动效果</li>
-<li>special .js：关灯后背景效果</li>
-<li>tools.js：背景声效、进度条随视频的播放、视频时间计算等</li>
-<li>videoPlay.js：视频的切换、进度条的推拽、点击等效果。</li>
-</ol>
-<p>music：音乐文件</p>
-<p>va：视频文件</p>
-<p>VideoPlayer.html：初始页面。<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">https://hexo.io/docs/one-command-deployment.html</a>)</p>
 
       
     </div>
