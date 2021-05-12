@@ -34,12 +34,6 @@
     
     
     
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-    <category term="CSS3" scheme="http://example.com/tags/CSS3/"/>
-    
   </entry>
   
 </feed>
