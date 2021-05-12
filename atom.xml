@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>清风</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-05-12T12:35:56.625Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>龙宇腾</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>demo</title>
+    <link href="http://example.com/2021/05/12/demo1/"/>
+    <id>http://example.com/2021/05/12/demo1/</id>
+    <published>2021-05-11T16:00:00.000Z</published>
+    <updated>2021-05-12T12:35:56.625Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2021/05/12/demo1/01.png" alt="demo1"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2021/05/12/demo1/01.png&quot; alt=&quot;demo1&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
